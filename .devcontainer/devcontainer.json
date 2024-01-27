@@ -1,7 +1,12 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers-contrib/features/node-asdf:0": {},
-    "ghcr.io/devcontainers/features/aws-cli:1": {}
-  }
+    "ghcr.io/devcontainers-contrib/features/node-asdf:0": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/aws-cli:1": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git"
 }
